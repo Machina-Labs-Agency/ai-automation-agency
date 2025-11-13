@@ -1,0 +1,288 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact Us - AI Automation Agency Miami" description="Contact AI Automation Miami for your business automation needs. Get a free consultation and transform your operations with AI.">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-5xl font-bold mb-6">Contact Us</h1>
+        <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+          Ready to transform your business with AI automation? Let's start the conversation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Info -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        
+        <!-- Contact Form -->
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Get Your Free Consultation</h2>
+          <p class="text-lg text-gray-600 mb-8">
+            Fill out the form below and we'll get back to you within 24 hours to discuss your automation needs.
+          </p>
+          
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                <input type="text" id="firstName" name="firstName" required 
+                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              </div>
+              <div>
+                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required 
+                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              </div>
+            </div>
+            
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+              <input type="email" id="email" name="email" required 
+                     class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+              <input type="tel" id="phone" name="phone" 
+                     class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            
+            <div>
+              <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+              <input type="text" id="company" name="company" required 
+                     class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            
+            <div>
+              <label for="industry" class="block text-sm font-medium text-gray-700 mb-2">Industry</label>
+              <select id="industry" name="industry" required 
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <option value="">Select your industry</option>
+                <option value="real-estate">Real Estate</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="finance">Finance</option>
+                <option value="retail">Retail</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="hospitality">Hospitality</option>
+                <option value="legal">Legal Services</option>
+                <option value="education">Education</option>
+                <option value="construction">Construction</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="employees" class="block text-sm font-medium text-gray-700 mb-2">Number of Employees</label>
+              <select id="employees" name="employees" required 
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <option value="">Select company size</option>
+                <option value="1-10">1-10 employees</option>
+                <option value="11-50">11-50 employees</option>
+                <option value="51-100">51-100 employees</option>
+                <option value="101-500">101-500 employees</option>
+                <option value="500+">500+ employees</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="services" class="block text-sm font-medium text-gray-700 mb-2">Services Interested In</label>
+              <div class="space-y-2">
+                <label class="flex items-center">
+                  <input type="checkbox" name="services" value="process-automation" class="mr-2 text-blue-600">
+                  <span class="text-sm text-gray-700">Process Automation</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" name="services" value="ai-chatbots" class="mr-2 text-blue-600">
+                  <span class="text-sm text-gray-700">AI Chatbots</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" name="services" value="workflow-optimization" class="mr-2 text-blue-600">
+                  <span class="text-sm text-gray-700">Workflow Optimization</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" name="services" value="data-analytics" class="mr-2 text-blue-600">
+                  <span class="text-sm text-gray-700">Data Analytics & BI</span>
+                </label>
+              </div>
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Tell Us About Your Project</label>
+              <textarea id="message" name="message" rows="4" required 
+                        placeholder="Describe your current processes and what you'd like to automate..."
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+            </div>
+            
+            <div>
+              <button type="submit" 
+                      class="w-full bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold text-lg transition-colors">
+                Get Free Consultation
+              </button>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Contact Information -->
+        <div>
+          <div class="bg-gray-50 rounded-lg p-8 mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+            
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="bg-blue-100 w-10 h-10 rounded-lg flex items-center justify-center mr-4 mt-1">
+                  <span class="text-lg">📍</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Visit Our Office</h4>
+                  <p class="text-gray-600">
+                    1234 Biscayne Boulevard, Suite 800<br>
+                    Miami, FL 33132
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-blue-100 w-10 h-10 rounded-lg flex items-center justify-center mr-4 mt-1">
+                  <span class="text-lg">📞</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Call Us</h4>
+                  <p class="text-gray-600">
+                    <a href="tel:3055550123" class="hover:text-blue-600">(305) 555-0123</a><br>
+                    Monday - Friday: 9AM - 6PM<br>
+                    Saturday: 10AM - 4PM
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-blue-100 w-10 h-10 rounded-lg flex items-center justify-center mr-4 mt-1">
+                  <span class="text-lg">✉️</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Email Us</h4>
+                  <p class="text-gray-600">
+                    <a href="mailto:info@aiautomationmiami.com" class="hover:text-blue-600">info@aiautomationmiami.com</a><br>
+                    We respond within 24 hours
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Quick Actions -->
+          <div class="space-y-4">
+            <a href="tel:3055550123" 
+               class="w-full bg-green-600 text-white hover:bg-green-700 px-6 py-3 rounded-lg font-semibold text-center block transition-colors">
+              📞 Call Now for Immediate Help
+            </a>
+            
+            <a href="mailto:info@aiautomationmiami.com" 
+               class="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-semibold text-center block transition-colors">
+              ✉️ Send Direct Email
+            </a>
+          </div>
+          
+          <!-- Response Time -->
+          <div class="mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+            <div class="flex items-center">
+              <span class="text-2xl mr-2">⚡</span>
+              <div>
+                <h4 class="font-semibold text-yellow-800">Fast Response Guarantee</h4>
+                <p class="text-sm text-yellow-700">We respond to all inquiries within 24 hours, often much sooner!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <p class="text-xl text-gray-600">Quick answers to common automation questions</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">How long does implementation take?</h3>
+          <p class="text-gray-600">
+            Most automation projects are completed within 2-8 weeks, depending on complexity. Simple chatbot deployments can be live in just a few days.
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">What's the typical ROI?</h3>
+          <p class="text-gray-600">
+            Our clients typically see 200-400% ROI within the first year, with some achieving payback in as little as 3 months.
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Do you provide training?</h3>
+          <p class="text-gray-600">
+            Yes! We provide comprehensive training for your team and ongoing support to ensure you get maximum value from your automation systems.
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Is there a minimum company size?</h3>
+          <p class="text-gray-600">
+            Not at all! We work with businesses of all sizes, from solo entrepreneurs to large enterprises. We have solutions that scale to your needs.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-blue-600 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold mb-6">Ready to Automate Your Success?</h2>
+      <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+        Don't wait to transform your business. The sooner you automate, the sooner you start saving time and money.
+      </p>
+      <p class="text-lg text-yellow-300 font-semibold">
+        Free consultation • No obligation • 24-hour response guaranteed
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Form handling
+  document.querySelector('form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    
+    // Simple validation
+    if (!data.firstName || !data.lastName || !data.email || !data.company) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    
+    // Simulate form submission
+    alert('Thank you for your interest! We will contact you within 24 hours to schedule your free consultation.');
+    
+    // In a real application, you would send this data to your server
+    console.log('Form data:', data);
+    
+    // Reset form
+    this.reset();
+  });
+</script>
