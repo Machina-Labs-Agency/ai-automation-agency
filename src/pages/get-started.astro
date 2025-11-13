@@ -1,0 +1,414 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Get Your AI Chatbot in 2 Weeks | Start Now | Machina Labs Miami" 
+  description="Start automating today! Fill out our 2-minute form and get your custom AI chatbot proposal within 24 hours. 100+ Miami businesses automated. Free consultation included."
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">
+        <span class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+          Let's Automate Your Business
+        </span>
+      </h1>
+      <p class="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
+        Fill out the form below and get your custom proposal within 24 hours. Most clients are live in 2 weeks.
+      </p>
+      
+      <!-- Trust Indicators -->
+      <div class="flex flex-wrap justify-center gap-4">
+        <div class="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+          <span class="text-green-400 mr-2">✓</span>
+          <span>Guaranteed 24hr response</span>
+        </div>
+        <div class="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+          <span class="text-green-400 mr-2">✓</span>
+          <span>Free consultation included</span>
+        </div>
+        <div class="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+          <span class="text-green-400 mr-2">✓</span>
+          <span>No obligation quote</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Form Section -->
+  <section class="py-16 bg-gradient-to-br from-gray-50 to-purple-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Form -->
+        <div class="lg:col-span-2">
+          <div class="bg-white p-8 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">Get Started in 3 Simple Steps</h2>
+            
+            <form class="space-y-6" id="getStartedForm">
+              <!-- Step 1: Business Info -->
+              <div class="border-l-4 border-purple-500 pl-6">
+                <h3 class="text-xl font-bold mb-4 text-gray-900">Step 1: Tell Us About Your Business</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">
+                      First Name <span class="text-red-500">*</span>
+                    </label>
+                    <input type="text" id="firstName" name="firstName" required 
+                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                  </div>
+                  <div>
+                    <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">
+                      Last Name <span class="text-red-500">*</span>
+                    </label>
+                    <input type="text" id="lastName" name="lastName" required 
+                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                    Email <span class="text-red-500">*</span>
+                  </label>
+                  <input type="email" id="email" name="email" required 
+                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                </div>
+
+                <div class="mb-4">
+                  <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number <span class="text-red-500">*</span>
+                  </label>
+                  <input type="tel" id="phone" name="phone" required 
+                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                  <p class="text-xs text-gray-500 mt-1">We'll call you within 24 hours</p>
+                </div>
+
+                <div class="mb-4">
+                  <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
+                    Company Name <span class="text-red-500">*</span>
+                  </label>
+                  <input type="text" id="company" name="company" required 
+                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                </div>
+
+                <div class="mb-4">
+                  <label for="website" class="block text-sm font-medium text-gray-700 mb-2">
+                    Website URL
+                  </label>
+                  <input type="url" id="website" name="website" 
+                         placeholder="https://yourwebsite.com"
+                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label for="industry" class="block text-sm font-medium text-gray-700 mb-2">
+                      Industry <span class="text-red-500">*</span>
+                    </label>
+                    <select id="industry" name="industry" required 
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                      <option value="">Select your industry</option>
+                      <option value="real-estate">Real Estate</option>
+                      <option value="legal">Legal Services</option>
+                      <option value="healthcare">Healthcare/Medical</option>
+                      <option value="fitness">Fitness/Wellness</option>
+                      <option value="retail">Retail/E-commerce</option>
+                      <option value="hospitality">Hospitality/Hotels</option>
+                      <option value="construction">Construction</option>
+                      <option value="financial">Financial Services</option>
+                      <option value="automotive">Automotive</option>
+                      <option value="home-services">Home Services</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="employees" class="block text-sm font-medium text-gray-700 mb-2">
+                      Company Size <span class="text-red-500">*</span>
+                    </label>
+                    <select id="employees" name="employees" required 
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                      <option value="">Select size</option>
+                      <option value="1-5">1-5 employees (Solopreneur/Small)</option>
+                      <option value="6-20">6-20 employees (Small Business)</option>
+                      <option value="21-50">21-50 employees (Growing SMB)</option>
+                      <option value="51-200">51-200 employees (Mid-Market)</option>
+                      <option value="200+">200+ employees (Enterprise)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 2: What You Need -->
+              <div class="border-l-4 border-cyan-500 pl-6">
+                <h3 class="text-xl font-bold mb-4 text-gray-900">Step 2: What Do You Need?</h3>
+                
+                <div class="mb-4">
+                  <label class="block text-sm font-medium text-gray-700 mb-3">
+                    Services Interested In <span class="text-red-500">*</span> (Select all that apply)
+                  </label>
+                  <div class="space-y-3">
+                    <label class="flex items-start p-3 border border-gray-200 rounded-lg hover:bg-purple-50 cursor-pointer">
+                      <input type="checkbox" name="services" value="ai-chatbot" class="mt-1 mr-3 text-purple-600">
+                      <div>
+                        <span class="font-semibold text-gray-900">AI Chatbot</span>
+                        <p class="text-sm text-gray-600">24/7 lead capture, qualification & appointment booking</p>
+                        <span class="text-xs text-purple-600 font-semibold">From $2,500</span>
+                      </div>
+                    </label>
+                    <label class="flex items-start p-3 border border-gray-200 rounded-lg hover:bg-cyan-50 cursor-pointer">
+                      <input type="checkbox" name="services" value="lead-generation" class="mt-1 mr-3 text-cyan-600">
+                      <div>
+                        <span class="font-semibold text-gray-900">Lead Generation Automation</span>
+                        <p class="text-sm text-gray-600">Automated nurture campaigns & follow-ups</p>
+                        <span class="text-xs text-cyan-600 font-semibold">From $3,500</span>
+                      </div>
+                    </label>
+                    <label class="flex items-start p-3 border border-gray-200 rounded-lg hover:bg-pink-50 cursor-pointer">
+                      <input type="checkbox" name="services" value="crm-automation" class="mt-1 mr-3 text-pink-600">
+                      <div>
+                        <span class="font-semibold text-gray-900">CRM Automation</span>
+                        <p class="text-sm text-gray-600">Auto-sync leads, workflows & deal tracking</p>
+                        <span class="text-xs text-pink-600 font-semibold">From $4,000</span>
+                      </div>
+                    </label>
+                    <label class="flex items-start p-3 border border-gray-200 rounded-lg hover:bg-orange-50 cursor-pointer">
+                      <input type="checkbox" name="services" value="voice-ai" class="mt-1 mr-3 text-orange-600">
+                      <div>
+                        <span class="font-semibold text-gray-900">Voice AI (Phone)</span>
+                        <p class="text-sm text-gray-600">AI answers calls & qualifies leads 24/7</p>
+                        <span class="text-xs text-orange-600 font-semibold">From $6,000</span>
+                      </div>
+                    </label>
+                    <label class="flex items-start p-3 border border-gray-200 rounded-lg hover:bg-blue-50 cursor-pointer">
+                      <input type="checkbox" name="services" value="not-sure" class="mt-1 mr-3 text-blue-600">
+                      <div>
+                        <span class="font-semibold text-gray-900">Not Sure - Help Me Choose</span>
+                        <p class="text-sm text-gray-600">Let's discuss what's best for your business</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <label for="timeline" class="block text-sm font-medium text-gray-700 mb-2">
+                    When Do You Want to Launch? <span class="text-red-500">*</span>
+                  </label>
+                  <select id="timeline" name="timeline" required 
+                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                    <option value="">Select timeline</option>
+                    <option value="asap">ASAP - I'm losing leads now!</option>
+                    <option value="1-2weeks">Within 1-2 weeks</option>
+                    <option value="this-month">This month</option>
+                    <option value="next-month">Next month</option>
+                    <option value="just-exploring">Just exploring options</option>
+                  </select>
+                </div>
+
+                <div class="mb-4">
+                  <label for="budget" class="block text-sm font-medium text-gray-700 mb-2">
+                    Budget Range <span class="text-red-500">*</span>
+                  </label>
+                  <select id="budget" name="budget" required 
+                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                    <option value="">Select budget</option>
+                    <option value="under-5k">Under $5,000</option>
+                    <option value="5-10k">$5,000 - $10,000</option>
+                    <option value="10-25k">$10,000 - $25,000</option>
+                    <option value="25-50k">$25,000 - $50,000</option>
+                    <option value="50k+">$50,000+</option>
+                    <option value="flexible">Flexible - Show me ROI</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Step 3: Your Situation -->
+              <div class="border-l-4 border-pink-500 pl-6">
+                <h3 class="text-xl font-bold mb-4 text-gray-900">Step 3: Tell Us Your Situation</h3>
+                
+                <div class="mb-4">
+                  <label for="challenges" class="block text-sm font-medium text-gray-700 mb-2">
+                    What's Your Biggest Challenge? <span class="text-red-500">*</span>
+                  </label>
+                  <textarea id="challenges" name="challenges" rows="4" required 
+                            placeholder="Example: We're missing 60% of leads because they contact us after hours. By the time we respond next day, they've already booked with competitors..."
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500"></textarea>
+                </div>
+
+                <div class="mb-4">
+                  <label for="currentLeads" class="block text-sm font-medium text-gray-700 mb-2">
+                    How Many Leads/Inquiries Per Month?
+                  </label>
+                  <select id="currentLeads" name="currentLeads" 
+                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                    <option value="">Select range</option>
+                    <option value="0-50">0-50 leads/month</option>
+                    <option value="50-100">50-100 leads/month</option>
+                    <option value="100-250">100-250 leads/month</option>
+                    <option value="250-500">250-500 leads/month</option>
+                    <option value="500+">500+ leads/month</option>
+                    <option value="not-sure">Not sure</option>
+                  </select>
+                </div>
+
+                <div class="mb-4">
+                  <label for="currentCRM" class="block text-sm font-medium text-gray-700 mb-2">
+                    Current CRM or Tools
+                  </label>
+                  <input type="text" id="currentCRM" name="currentCRM" 
+                         placeholder="e.g., Salesforce, HubSpot, Google Sheets, None"
+                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                </div>
+              </div>
+
+              <!-- Consent -->
+              <div class="border-t pt-6">
+                <label class="flex items-start">
+                  <input type="checkbox" name="consent" required class="mt-1 mr-3 text-purple-600">
+                  <span class="text-sm text-gray-700">
+                    I agree to receive communication from Machina Labs AI Agency about my inquiry. 
+                    We respect your privacy and will never spam you. <span class="text-red-500">*</span>
+                  </span>
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="bg-gradient-to-r from-purple-50 to-cyan-50 p-6 rounded-xl">
+                <button type="submit" 
+                        class="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white px-8 py-5 rounded-lg text-xl font-bold transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
+                  Get My Custom Proposal →
+                </button>
+                <p class="text-center text-sm text-gray-600 mt-4">
+                  ✅ Free consultation | ⚡ 24-hour response | 🚫 No obligation
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Sidebar: Why Choose Us -->
+        <div class="space-y-6">
+          <div class="bg-white p-6 rounded-xl shadow-lg sticky top-6">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">What Happens Next?</h3>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="bg-purple-100 w-10 h-10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <span class="font-bold text-purple-600">1</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Tulio Reviews Your Form</h4>
+                  <p class="text-sm text-gray-600">Our founder personally reviews every submission within 24 hours</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-cyan-100 w-10 h-10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <span class="font-bold text-cyan-600">2</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Schedule Consultation</h4>
+                  <p class="text-sm text-gray-600">30-min call to discuss your needs and see if we're a fit</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-pink-100 w-10 h-10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <span class="font-bold text-pink-600">3</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Get Custom Proposal</h4>
+                  <p class="text-sm text-gray-600">Detailed plan with pricing, timeline, and expected ROI</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <span class="font-bold text-green-600">4</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Launch in 2 Weeks</h4>
+                  <p class="text-sm text-gray-600">We handle everything. You just watch leads roll in</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 p-4 bg-green-50 rounded-lg border border-green-200">
+              <p class="text-sm text-green-800">
+                <strong>100% of clients</strong> who book a consultation end up moving forward. Why? Because we only work with businesses where we know we can deliver 300%+ ROI.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-purple-600 to-cyan-600 p-6 rounded-xl text-white">
+            <h3 class="text-lg font-bold mb-3">Prefer to Talk First?</h3>
+            <p class="text-sm text-cyan-100 mb-4">
+              Email Tulio directly for immediate response:
+            </p>
+            <a href="mailto:info@tuliosousa.pro" class="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold block text-center transition-all">
+              ✉️ info@tuliosousa.pro
+            </a>
+            <p class="text-xs text-cyan-200 mt-3 text-center">
+              Typical response time: &lt;2 hours
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Join 100+ Miami Businesses Already Winning</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="text-4xl font-bold text-purple-600 mb-2">100+</div>
+          <div class="text-sm text-gray-600">Businesses Automated</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-cyan-600 mb-2">300%</div>
+          <div class="text-sm text-gray-600">Avg Lead Increase</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-pink-600 mb-2">4.9/5</div>
+          <div class="text-sm text-gray-600">Client Rating</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-green-600 mb-2">2 Wks</div>
+          <div class="text-sm text-gray-600">Avg Setup Time</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Form handling
+  document.getElementById('getStartedForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    
+    // Validate services checkbox
+    const servicesChecked = Array.from(document.querySelectorAll('input[name="services"]:checked'));
+    if (servicesChecked.length === 0) {
+      alert('Please select at least one service you\'re interested in.');
+      return;
+    }
+    
+    // In production, send to your backend
+    console.log('Form data:', data);
+    console.log('Services selected:', servicesChecked.map(cb => cb.value));
+    
+    // Show success message
+    alert('Thank you! We\'ll review your information and contact you within 24 hours with a custom proposal.');
+    
+    // Reset form
+    this.reset();
+    
+    // Redirect to thank you page
+    // window.location.href = '/thank-you';
+  });
+</script>

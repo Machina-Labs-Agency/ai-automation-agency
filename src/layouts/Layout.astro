@@ -4,42 +4,108 @@ export interface Props {
   description?: string;
 }
 
-const { title, description = "Machina Labs AI Agency - Online AI automation services for Miami businesses. Transform operations with cutting-edge technology." } = Astro.props;
+const { title, description = "Miami's #1 AI chatbot agency. 24/7 lead generation, automated CRM, instant responses. From $2,500. 100+ businesses automated. Setup in 2 weeks." } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og-image.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="/og-image.png" />
+    <meta property="twitter:creator" content="@tuliosousapro" />
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Generator -->
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- Google Site Verification (add your code) -->
+    <!-- <meta name="google-site-verification" content="YOUR_CODE_HERE" /> -->
+    
     <title>{title}</title>
   </head>
   <body class="min-h-screen bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 shadow-lg border-b border-cyan-500/20">
+    <nav class="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 shadow-lg border-b border-cyan-500/20 sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <div class="flex items-center">
             <a href="/" class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Machina Labs AI Agency
+              Machina Labs
+            </a>
+            <span class="ml-3 text-sm text-cyan-400 hidden sm:inline">AI Agency Miami</span>
+          </div>
+          
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-cyan-400 p-2" aria-label="Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-baseline space-x-6">
+            <a href="/ai-chatbot-miami" class="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              AI Chatbot
+            </a>
+            <a href="/pricing" class="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Pricing
+            </a>
+            <a href="/case-studies" class="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Results
+            </a>
+            <a href="/about" class="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              About
+            </a>
+            <a href="/get-started" class="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-2 rounded-lg text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-cyan-500/25">
+              Get Started →
             </a>
           </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-8">
-              <a href="/" class="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-              <a href="/services" class="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
-              <a href="/locations" class="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Locations</a>
-              <a href="/about" class="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-              <a href="/contact" class="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25">Contact</a>
-            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+          <div class="flex flex-col space-y-2">
+            <a href="/ai-chatbot-miami" class="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              AI Chatbot
+            </a>
+            <a href="/pricing" class="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Pricing
+            </a>
+            <a href="/case-studies" class="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Results
+            </a>
+            <a href="/about" class="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              About
+            </a>
+            <a href="/get-started" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg text-sm font-bold text-center">
+              Get Started →
+            </a>
           </div>
         </div>
       </div>
     </nav>
 
+    <!-- Main Content -->
     <main>
       <slot />
     </main>
@@ -47,44 +113,90 @@ const { title, description = "Machina Labs AI Agency - Online AI automation serv
     <!-- Footer -->
     <footer class="bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 text-white">
       <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Brand Column -->
           <div>
-            <h3 class="text-xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Machina Labs AI Agency</h3>
-            <p class="text-gray-300 mb-4">
-              Online AI automation services transforming Miami businesses with cutting-edge technology and innovative solutions.
+            <h3 class="text-xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Machina Labs
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm">
+              Miami's #1 AI chatbot agency. Helping businesses capture more leads, automate workflows, and scale faster with AI automation.
             </p>
-            <p class="text-gray-300">
-              🌐 100% Online Agency<br>
-              📍 Serving Miami & Beyond<br>
-              📞 Virtual Consultations<br>
-              ✉️ info@tuliosousa.pro<br>
-              𝕏 @tuliosousapro
-            </p>
+            <div class="flex space-x-4">
+              <a href="https://x.com/tuliosousapro" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                <span class="text-xl">𝕏</span>
+              </a>
+            </div>
           </div>
+          
+          <!-- Services Column -->
           <div>
             <h4 class="font-semibold mb-4 text-cyan-400">Services</h4>
-            <ul class="space-y-2 text-gray-300">
-              <li>Process Automation</li>
-              <li>AI Chatbots</li>
-              <li>Workflow Optimization</li>
-              <li>Data Analytics</li>
-              <li>Custom AI Solutions</li>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li><a href="/ai-chatbot-miami" class="hover:text-cyan-400 transition-colors">AI Chatbot Development</a></li>
+              <li><a href="/lead-generation-automation" class="hover:text-cyan-400 transition-colors">Lead Generation</a></li>
+              <li><a href="/crm-automation-miami" class="hover:text-cyan-400 transition-colors">CRM Automation</a></li>
+              <li><a href="/voice-ai-miami" class="hover:text-cyan-400 transition-colors">Voice AI (Phone)</a></li>
             </ul>
           </div>
+          
+          <!-- Company Column -->
           <div>
-            <h4 class="font-semibold mb-4 text-cyan-400">Quick Links</h4>
-            <ul class="space-y-2 text-gray-300">
-              <li><a href="/services" class="hover:text-cyan-400 transition-colors">Services</a></li>
+            <h4 class="font-semibold mb-4 text-cyan-400">Company</h4>
+            <ul class="space-y-2 text-sm text-gray-300">
               <li><a href="/about" class="hover:text-cyan-400 transition-colors">About Us</a></li>
-              <li><a href="/locations" class="hover:text-cyan-400 transition-colors">Coverage Areas</a></li>
+              <li><a href="/case-studies" class="hover:text-cyan-400 transition-colors">Case Studies</a></li>
+              <li><a href="/pricing" class="hover:text-cyan-400 transition-colors">Pricing</a></li>
               <li><a href="/contact" class="hover:text-cyan-400 transition-colors">Contact</a></li>
             </ul>
           </div>
+          
+          <!-- Contact Column -->
+          <div>
+            <h4 class="font-semibold mb-4 text-cyan-400">Get In Touch</h4>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>
+                📍 Miami, Florida
+              </li>
+              <li>
+                ✉️ <a href="mailto:info@tuliosousa.pro" class="hover:text-cyan-400 transition-colors">info@tuliosousa.pro</a>
+              </li>
+              <li>
+                𝕏 <a href="https://x.com/tuliosousapro" target="_blank" class="hover:text-cyan-400 transition-colors">@tuliosousapro</a>
+              </li>
+              <li class="pt-4">
+                <a href="/get-started" class="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-2 rounded-lg font-semibold inline-block text-center transition-all">
+                  Get Started →
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Machina Labs AI Agency. Founded by Tulio Sousa. All rights reserved.</p>
+        
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-700 mt-8 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+            <p class="text-gray-400 mb-4 md:mb-0">
+              &copy; 2024 Machina Labs AI Agency. Founded by Tulio Sousa. All rights reserved.
+            </p>
+            <div class="flex space-x-6 text-gray-400">
+              <a href="/privacy" class="hover:text-cyan-400 transition-colors">Privacy Policy</a>
+              <a href="/terms" class="hover:text-cyan-400 transition-colors">Terms of Service</a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+      document.getElementById('mobile-menu-button')?.addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu?.classList.toggle('hidden');
+      });
+    </script>
+
+    <!-- Simple Analytics (Optional - replace with your tracking) -->
+    <!-- <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script> -->
   </body>
 </html>

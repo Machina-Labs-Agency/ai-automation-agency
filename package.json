@@ -1,7 +1,8 @@
 {
-  "name": "ai-automation-agency",
+  "name": "machina-labs-ai-agency",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "AI Chatbot & Automation Agency - Miami FL",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -14,6 +15,6 @@
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.0.0",
-    "tailwindcss": "^3.0.0"
+    "tailwindcss": "^3.4.0"
   }
 }
