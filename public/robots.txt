@@ -1,0 +1,40 @@
+# robots.txt - Optimized for SEO
+# Allow all crawlers full access
+
+User-agent: *
+Allow: /
+
+# High-priority pages
+Allow: /ai-chatbot-miami
+Allow: /pricing
+Allow: /get-started
+Allow: /about
+Allow: /contact
+Allow: /services
+
+# Block admin/private areas (if any in future)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+
+# Allow search engines to crawl images
+User-agent: Googlebot-Image
+Allow: /
+
+# Sitemap location
+Sitemap: https://your-domain.com/sitemap-index.xml
+Sitemap: https://your-domain.com/sitemap-0.xml
+
+# Crawl-delay for aggressive bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
