@@ -2,272 +2,62 @@
 export interface Props {
   title: string;
   description?: string;
-  canonical?: string;
-  ogImage?: string;
 }
 
-const { 
-  title, 
-  description = "Miami's #1 AI chatbot agency. 24/7 lead generation, automated CRM, instant responses. From $2,500. 100+ businesses automated. Setup in 2 weeks.",
-  canonical,
-  ogImage = "/og-image.png"
-} = Astro.props;
-
-const canonicalURL = canonical ? new URL(canonical, Astro.site) : new URL(Astro.url.pathname, Astro.site);
-const currentYear = new Date().getFullYear();
+const { title, description = "Miami's #1 AI chatbot agency. 24/7 lead generation, automated CRM, instant responses. From $2,500. 100+ businesses automated. Setup in 2 weeks." } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
-    
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- DNS Prefetch for external resources -->
-    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
-    <meta property="og:site_name" content="Machina Labs AI Agency" />
+    <meta property="og:image" content="/og-image.png" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL(ogImage, Astro.site)} />
+    <meta property="twitter:image" content="/og-image.png" />
     <meta property="twitter:creator" content="@tuliosousapro" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
     
     <!-- Generator -->
     <meta name="generator" content={Astro.generator} />
     
-    <!-- Geo tags for local SEO -->
-    <meta name="geo.region" content="US-FL" />
-    <meta name="geo.placename" content="Miami" />
-    <meta name="geo.position" content="25.7617;-80.1918" />
-    <meta name="ICBM" content="25.7617, -80.1918" />
-    
-    <!-- Language -->
-    <meta name="language" content="English" />
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#9333ea" />
+    <!-- Google Site Verification (add your code) -->
+    <!-- <meta name="google-site-verification" content="YOUR_CODE_HERE" /> -->
     
     <title>{title}</title>
-    
-    <!-- Critical CSS Inline (above-the-fold) -->
-    <style>
-      /* Critical CSS for initial render */
-      body {
-        margin: 0;
-        font-family: system-ui, -apple-system, sans-serif;
-        -webkit-font-smoothing: antialiased;
-      }
-      
-      /* Navigation critical styles */
-      nav {
-        position: sticky;
-        top: 0;
-        z-index: 50;
-      }
-      
-      /* Prevent layout shift */
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-      
-      /* Loading state */
-      .loading {
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-      
-      .loaded {
-        opacity: 1;
-      }
-    </style>
-    
-    <!-- Schema.org LocalBusiness Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "https://your-domain.com/#organization",
-      "name": "Machina Labs AI Agency",
-      "alternateName": ["Machina Labs", "Machina AI"],
-      "description": "AI Chatbot Development and Lead Generation Automation for Miami Businesses. 24/7 automated lead capture, CRM integration, and business process automation.",
-      "url": "https://your-domain.com",
-      "telephone": "+1-305-XXX-XXXX",
-      "email": "info@tuliosousa.pro",
-      "image": "https://your-domain.com/og-image.png",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://your-domain.com/favicon.svg",
-        "width": "128",
-        "height": "128"
-      },
-      "founder": {
-        "@type": "Person",
-        "name": "Tulio Sousa",
-        "email": "info@tuliosousa.pro",
-        "jobTitle": "Founder & CEO",
-        "sameAs": ["https://x.com/tuliosousapro"]
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "",
-        "addressLocality": "Miami",
-        "addressRegion": "FL",
-        "postalCode": "",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "25.7617",
-        "longitude": "-80.1918"
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Miami",
-          "sameAs": "https://en.wikipedia.org/wiki/Miami"
-        },
-        {
-          "@type": "City",
-          "name": "Miami Beach"
-        },
-        {
-          "@type": "City",
-          "name": "Coral Gables"
-        },
-        {
-          "@type": "City",
-          "name": "Brickell"
-        },
-        {
-          "@type": "City",
-          "name": "Aventura"
-        }
-      ],
-      "priceRange": "$$",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "100",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "openingHours": "Mo-Fr 09:00-18:00",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "18:00"
-        }
-      ],
-      "sameAs": [
-        "https://x.com/tuliosousapro"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "AI Automation Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "AI Chatbot Development",
-              "description": "24/7 AI chatbot for lead capture, qualification and appointment booking. Multi-platform support including website, WhatsApp, and Facebook Messenger.",
-              "provider": {
-                "@id": "https://your-domain.com/#organization"
-              },
-              "areaServed": "Miami, FL",
-              "availableChannel": {
-                "@type": "ServiceChannel",
-                "serviceUrl": "https://your-domain.com/ai-chatbot-miami"
-              }
-            },
-            "price": "2500",
-            "priceCurrency": "USD"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Lead Generation Automation",
-              "description": "Automated email sequences, SMS campaigns, and lead nurturing systems",
-              "provider": {
-                "@id": "https://your-domain.com/#organization"
-              },
-              "areaServed": "Miami, FL"
-            },
-            "price": "3500",
-            "priceCurrency": "USD"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "CRM Automation",
-              "description": "Auto-sync leads, custom workflows, and deal tracking for Salesforce, HubSpot, and more",
-              "provider": {
-                "@id": "https://your-domain.com/#organization"
-              },
-              "areaServed": "Miami, FL"
-            },
-            "price": "4000",
-            "priceCurrency": "USD"
-          }
-        ]
-      }
-    }
-    </script>
-    
-    <!-- BreadcrumbList Schema (will be added per page) -->
-    <slot name="schema" />
   </head>
-  
-  <body class="min-h-screen bg-gray-50 loading">
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white">
-      Skip to main content
-    </a>
-    
+  <body class="min-h-screen bg-gray-50">
     <!-- Navigation -->
     <nav class="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 shadow-lg border-b border-cyan-500/20 sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <div class="flex items-center">
-            <a href="/" class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent" aria-label="Machina Labs Home">
+            <a href="/" class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Machina Labs
             </a>
             <span class="ml-3 text-sm text-cyan-400 hidden sm:inline">AI Agency Miami</span>
           </div>
           
           <!-- Mobile Menu Button -->
-          <button 
-            id="mobile-menu-button" 
-            class="md:hidden text-gray-300 hover:text-cyan-400 p-2" 
-            aria-label="Toggle mobile menu"
-            aria-expanded="false"
-          >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-cyan-400 p-2" aria-label="Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
@@ -316,7 +106,7 @@ const currentYear = new Date().getFullYear();
     </nav>
 
     <!-- Main Content -->
-    <main id="main-content">
+    <main>
       <slot />
     </main>
 
@@ -333,7 +123,7 @@ const currentYear = new Date().getFullYear();
               Miami's #1 AI chatbot agency. Helping businesses capture more leads, automate workflows, and scale faster with AI automation.
             </p>
             <div class="flex space-x-4">
-              <a href="https://x.com/tuliosousapro" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="Follow on X">
+              <a href="https://x.com/tuliosousapro" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors">
                 <span class="text-xl">𝕏</span>
               </a>
             </div>
@@ -372,7 +162,7 @@ const currentYear = new Date().getFullYear();
                 ✉️ <a href="mailto:info@tuliosousa.pro" class="hover:text-cyan-400 transition-colors">info@tuliosousa.pro</a>
               </li>
               <li>
-                𝕏 <a href="https://x.com/tuliosousapro" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">@tuliosousapro</a>
+                𝕏 <a href="https://x.com/tuliosousapro" target="_blank" class="hover:text-cyan-400 transition-colors">@tuliosousapro</a>
               </li>
               <li class="pt-4">
                 <a href="/get-started" class="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-2 rounded-lg font-semibold inline-block text-center transition-all">
@@ -387,7 +177,7 @@ const currentYear = new Date().getFullYear();
         <div class="border-t border-gray-700 mt-8 pt-8">
           <div class="flex flex-col md:flex-row justify-between items-center text-sm">
             <p class="text-gray-400 mb-4 md:mb-0">
-              &copy; {currentYear} Machina Labs AI Agency. Founded by Tulio Sousa. All rights reserved.
+              &copy; 2024 Machina Labs AI Agency. Founded by Tulio Sousa. All rights reserved.
             </p>
             <div class="flex space-x-6 text-gray-400">
               <a href="/privacy" class="hover:text-cyan-400 transition-colors">Privacy Policy</a>
@@ -398,67 +188,15 @@ const currentYear = new Date().getFullYear();
       </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Mobile Menu Script -->
     <script>
-      // Mobile menu toggle
       document.getElementById('mobile-menu-button')?.addEventListener('click', function() {
         const menu = document.getElementById('mobile-menu');
-        const button = this;
-        const isExpanded = button.getAttribute('aria-expanded') === 'true';
-        
         menu?.classList.toggle('hidden');
-        button.setAttribute('aria-expanded', (!isExpanded).toString());
       });
-      
-      // Lazy loading for images
-      if ('loading' in HTMLImageElement.prototype) {
-        const images = document.querySelectorAll('img[loading="lazy"]');
-        images.forEach(img => {
-          img.src = img.dataset.src || img.src;
-        });
-      } else {
-        // Fallback for browsers that don't support lazy loading
-        const script = document.createElement('script');
-        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
-        document.body.appendChild(script);
-      }
-      
-      // Remove loading class when page is loaded
-      window.addEventListener('load', () => {
-        document.body.classList.remove('loading');
-        document.body.classList.add('loaded');
-      });
-      
-      // Performance: Log Core Web Vitals
-      if ('PerformanceObserver' in window) {
-        // Log LCP
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          console.log('LCP:', lastEntry.renderTime || lastEntry.loadTime);
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        
-        // Log FID
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            console.log('FID:', entry.processingStart - entry.startTime);
-          });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-      }
     </script>
 
-    <!-- Google Analytics (Optional - replace with your tracking ID) -->
-    <!-- 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-    -->
+    <!-- Simple Analytics (Optional - replace with your tracking) -->
+    <!-- <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script> -->
   </body>
 </html>
